@@ -285,7 +285,7 @@ header {
   position: relative;
   width: 100%;
   min-height: 475px;
-  background: #ffffff url('../img/map.jpg') 0 0 no-repeat;
+  background: #ffffff url('../img/map.jpg') center 56% no-repeat;
 }
 .map .form {
   position: absolute;
@@ -320,7 +320,9 @@ header {
   letter-spacing: 0.02rem;
 }
 .map .form-label {
-  width: 96px;
+  width: 98px;
+  letter-spacing: 0.03rem;
+  word-spacing: 0.001rem;
 }
 .map .form-label-child {
   width: 80px;
@@ -334,7 +336,7 @@ header {
   font-style: normal;
   font-size: 14px;
   line-height: 26px;
-  letter-spacing: 0.02rem;
+  letter-spacing: 0.01rem;
   word-spacing: 0.001rem;
   text-transform: uppercase;
   border: none;
@@ -417,7 +419,7 @@ header {
   left: 185px;
 }
 .map .form-btn-bl {
-  margin-top: 25px;
+  margin-top: 26px;
   width: 100%;
   height: 58px;
   text-align: center;
@@ -426,6 +428,7 @@ header {
   font-style: normal;
   font-size: 21px;
   line-height: 26px;
+  border: none;
   color: #fff;
   background: #81b3d2;
 }
@@ -453,6 +456,8 @@ header {
   font-style: normal;
   font-size: 21px;
   text-transform: uppercase;
+  -webkit-transform: translate(0, -2px);
+          transform: translate(0, -2px);
   line-height: 26px;
 }
 .footer-p {
@@ -460,16 +465,15 @@ header {
 }
 .footer .social {
   margin-right: -9px;
-  width: 210px;
-  min-width: 152px;
-  min-height: 50px;
+  width: 212px;
+  height: 48px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 .footer .social-link {
-  margin-right: 5px;
-  width: 48px;
+  margin-right: 6px;
+  width: 45px;
   height: 48px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -489,14 +493,23 @@ header {
   background: #5496bd;
 }
 .footer-logo {
-  border: 1px solid;
+  margin-right: -2px;
+  display: block;
+  position: relative;
+  width: 114px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .footer-logo:before {
   content: 'WEBSITE by';
   display: block;
   position: absolute;
-  top: 50%;
-  left: -85px;
+  top: 47%;
+  left: -83px;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
   font-family: 'PT Sans', sans-serif;
@@ -508,23 +521,185 @@ header {
 }
 /* hotels */
 .hotels-main {
+  margin-top: 56px;
+  padding: 25px 73px;
   width: 100%;
-  min-height: 220px;
+  height: 216px;
+  background: url('../img/hotels/main_bg.jpg') center center no-repeat;
+}
+.hotels-main .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.hotels-main .form-header {
+  margin-left: -11px;
+  margin-bottom: 7px;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 21px;
+  color: #fff;
+}
+.hotels-main .form-input {
+  padding: 2px 27px;
+  width: 157px;
+  height: 26px;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  border: none;
+  background: transparent;
+}
+.hotels-main .form-input[type="checkbox"] {
+  display: none;
+}
+.hotels-main .form-input[type="checkbox"] + span {
+  position: absolute;
+  left: -38px;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  border: 2px solid;
+  border-radius: 3px;
+  background: transparent url(images/switch.png) no-repeat;
+  cursor: pointer;
+}
+.hotels-main .form fieldset {
+  min-width: 251px;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 21px;
+  text-transform: uppercase;
+  border: none;
+}
+.hotels-main .form legend {
+  margin-bottom: -4px;
+}
+.hotels-main .form-label-checkbox {
+  margin: 24px 0 24px 26px;
+}
+.hotels-main .form label {
+  display: block;
+  position: relative;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.hotels-main .form-price {
+  margin-left: 228px;
+}
+.hotels-main .form-price-border_input {
+  margin: 10px 0 10px -10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: #ffffff url('../img/hotels/main_bg.jpg') center center no-repeat;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 319px;
+  height: 36px;
+  border: 2px solid #fff;
+}
+.hotels-main .form-price label {
+  border: none;
+  display: inline-block;
+}
+.hotels-main .form-price-btn {
+  margin: 31px auto;
+  width: 137px;
+  height: 37px;
+  display: block;
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+.hotels-main .form-price-line {
+  position: relative;
+  margin-top: 20px;
+  margin-left: -4px;
+  width: 311px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+.hotels-main .form-price-line-circle {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -10px;
+  border-radius: 50%;
+  border: none;
+  background: #fff;
+  z-index: 98;
+}
+.hotels-main .form-price-line-circle:before {
+  content: '';
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(128, 128, 128, 0.6);
+}
+.hotels-main .form-price-line-circle_l {
+  left: -5px;
+}
+.hotels-main .form-price-line-circle_r {
+  left: 245px;
 }
 .hotels-search {
+  padding: 10px 73px;
   width: 100%;
-  /* min-height: 220px; */
 }
-.block-parametr {
-  border: 2px solid;
+.hotels-search h3 {
+  display: inline-block;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 21px;
+  line-height: 26px;
 }
-.block-price {
-  border: 2px solid;
+.hotels-search .sorting {
+  margin-left: 45px;
+  display: inline-block;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 18px;
+}
+.hotels-search .sorting-header {
+  margin: 0 21px 0 0;
+}
+.hotels-search .sorting-link {
+  margin: 0 15px;
+  display: inline-block;
+  text-decoration: none;
+  color: #766357;
+  border-bottom: 1px dotted;
+}
+.hotels-search .sorting-link-active {
+  border: none;
+  color: #81b3d2;
+}
+.hotels-search .sorting-link:hover {
+  border-bottom: 1px dotted;
+}
+.hotels-search .sorting-link:active {
+  border: none;
+  color: #000;
 }
